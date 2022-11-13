@@ -31,17 +31,10 @@ Deployment Phase: I will use BentoML for containerization and deploy the model l
    ``` bentoml models list```
    Run this:
    ```bentoml models get fuel_consumption_model:latest```
-5. Create Bentoml.yaml:
-   ```service : "predict.py:svc"
-labels :
-    owner : fraud-team
-    project : fraud
-include :
-- "predict.py"
-python:
-    packages:
-    - scikit-learn
-    - pydantic```
+5. Run:
+   ```vim bentofile.yaml```
+   Run:
+   ```vim service.py```
  6. Deploying service locally.
     Build service:
     ```bentoml serve --production --reload```
